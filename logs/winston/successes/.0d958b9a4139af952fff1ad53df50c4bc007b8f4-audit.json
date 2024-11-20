@@ -1,0 +1,45 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\university-management-core-service-starter\\logs\\winston\\successes\\.0d958b9a4139af952fff1ad53df50c4bc007b8f4-audit.json",
+    "files": [
+        {
+            "date": 1731174339767,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-09-11-23-success.log",
+            "hash": "7f06d6b599627aa429ea85f3a95ed88de8c0cce257044988feb2550fcaef4d55"
+        },
+        {
+            "date": 1731188553746,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-10-11-03-success.log",
+            "hash": "72ab6311286cb168276618a3d0925792b1c49342e88990cba1e12530a6252fac"
+        },
+        {
+            "date": 1731189761029,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-10-11-04-success.log",
+            "hash": "7673a1767c03d0211752fb34ec80f05fc300fe9d3252aa071f92c19bb554c583"
+        },
+        {
+            "date": 1731246350544,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-10-11-19-success.log",
+            "hash": "20c34c375f9c1ad542297ce8e3fe8f7ab0458fba1d9278f62a023f83842f9954"
+        },
+        {
+            "date": 1731247275093,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-10-11-20-success.log",
+            "hash": "d70861af25700613928c9a41a75e60cfea0403073ff9487d242920c492e0fb57"
+        },
+        {
+            "date": 1731252217071,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-10-11-21-success.log",
+            "hash": "9e63bb19510063cf1d65a7b9d3ddc7ef0fcd85b01fb6671159a24395112df851"
+        },
+        {
+            "date": 1731259137448,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-10-11-23-success.log",
+            "hash": "803080c0beae07c78b4a9bf869752391c438b311567db877d243becd69e19eee"
+        }
+    ],
+    "hashType": "sha256"
+}

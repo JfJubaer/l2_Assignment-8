@@ -1,0 +1,70 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\.be2746de888b9fd5f8dfdc992b96454e814af5b9-audit.json",
+    "files": [
+        {
+            "date": 1731302850295,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-11-11-11-success.log",
+            "hash": "1d9cd402877183297f8668509cd5f6e11368d062b59b8328cc1c21e772693168"
+        },
+        {
+            "date": 1731413197986,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-12-11-18-success.log",
+            "hash": "9487ae65ea643a36d8518e2ef4f9e6ba5b7c7f815987ac28d499279cb893ef39"
+        },
+        {
+            "date": 1731429367078,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-12-11-22-success.log",
+            "hash": "64f4a74c2f9a08ededdaad39fc0f655350be204ca9b10a0839c287714c06495e"
+        },
+        {
+            "date": 1731430980601,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-12-11-23-success.log",
+            "hash": "6c775656e2bd067e7bc17a03a6fd3bd1ed91a6d776446921b0080b2dc71bb530"
+        },
+        {
+            "date": 1731437061244,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-13-11-00-success.log",
+            "hash": "2b98c3c9477f49f9ee81ccc95e8592f94ff056ab8f7a19073a0b6e04d04eee41"
+        },
+        {
+            "date": 1731496548904,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-13-11-17-success.log",
+            "hash": "625b271be07c1dfa85e6e1fa496d12db5be20a0952be88c278b766f9cc20165a"
+        },
+        {
+            "date": 1731612823981,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-15-11-01-success.log",
+            "hash": "ee6fa273b56b251831e98239020be30806690da7b70bd05e4511f614b570d9c9"
+        },
+        {
+            "date": 1731760785836,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-16-11-18-success.log",
+            "hash": "04a01d5fbd689f6c5a00924ce7e33741d092af06f52cb5fa4fb4e160adbcb13e"
+        },
+        {
+            "date": 1731771761374,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-16-11-21-success.log",
+            "hash": "72f254ad1b299623bd07ba4eb8e59e9a3e02d526e790a4b768704e503ef83bf6"
+        },
+        {
+            "date": 1731866589985,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-18-11-00-success.log",
+            "hash": "c4dbf43369654f1be0b02b1cfdde3a27b682c1cb5d497c08dd4e9ce59f310652"
+        },
+        {
+            "date": 1731915763586,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-18-11-13-success.log",
+            "hash": "25b4da1adb7f505eb3c75f0aff53337563e6e08e4485b4b2f013c965a3d1d0f0"
+        },
+        {
+            "date": 1731917571158,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\university-management-core-service-starter\\logs\\winston\\successes\\phu-2024-18-11-14-success.log",
+            "hash": "2c1e6e0a2dc2b7e21469e04428bf1d6caf88693b3ca9c12e043059fee209d459"
+        }
+    ],
+    "hashType": "sha256"
+}

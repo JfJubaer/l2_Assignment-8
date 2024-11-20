@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\Assignment-8\\logs\\winston\\errors\\.3f695b551c2194b3290f836c132ecf8b81f4943f-audit.json",
+    "files": [
+        {
+            "date": 1732132606498,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\Assignment-8\\logs\\winston\\errors\\phu-2024-21-11-01-error.log",
+            "hash": "83acc154b1fa33c8c6336f4695985c21b852bb9a7464aa4cad3a9fd509826e04"
+        },
+        {
+            "date": 1732134680467,
+            "name": "C:\\Users\\Zubs\\Desktop\\Dev2.0\\mission-6\\Assignment-8\\logs\\winston\\errors\\phu-2024-21-11-02-error.log",
+            "hash": "8b882df83b29422a92b0bf66f45a04fd8c8eed4529717422bd700df512d0eab8"
+        }
+    ],
+    "hashType": "sha256"
+}

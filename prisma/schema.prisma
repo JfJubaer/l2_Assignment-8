@@ -1,0 +1,51 @@
+// -- Active: 1729435694436@@127.0.0.1@5432@book-service
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Book {
+  bookId         String   @id @default(uuid())
+  title          String
+  genre          String
+  publishedYear  Int
+  totalCopies    Int
+  availableCopies Int
+
+  BorrowRecords BorrowRecord[]
+
+  @@map("books")
+}
+
+model Member {
+  memberId        String   @id @default(uuid())
+  name            String
+  email           String   @unique
+  phone           String
+  membershipDate  DateTime
+
+  BorrowRecords BorrowRecord[]
+
+   @@map("members")
+}
+
+model BorrowRecord {
+  borrowId    String   @id @default(uuid())
+  borrowDate  DateTime
+  returnDate  DateTime?
+
+  bookId      String
+  memberId    String
+
+  Book        Book      @relation(fields: [bookId], references: [bookId])
+  Member      Member    @relation(fields: [memberId], references: [memberId])
+
+  @@map("borrowRecords")
+}
