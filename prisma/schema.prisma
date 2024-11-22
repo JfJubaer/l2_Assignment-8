@@ -11,41 +11,83 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Book {
-  bookId         String   @id @default(uuid())
-  title          String
-  genre          String
-  publishedYear  Int
-  totalCopies    Int
-  availableCopies Int
 
-  BorrowRecords BorrowRecord[]
+model User {
+  id         String   @id @default(uuid()) 
+  name       String
+  email      String   @unique
+  password   String
+  role       Role   @default(customer) 
+  contactNo  String?
+  address    String?
+  profileImg String?
+  reviews    ReviewAndRating[]
+  orders     Order[]
+
+  @@map("users")
+}
+
+model Category {
+  id    String  @id @default(uuid())
+  title String
+  books Book[]
+
+  @@map("categories")
+}
+
+model Book {
+  id               String             @id @default(uuid()) 
+  title            String
+  author           String
+  price            Float
+  genre            String
+  publicationDate  String
+  categoryId       String
+  category         Category           @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  reviews          ReviewAndRating[]
+  orderedBooks     Json[]
 
   @@map("books")
 }
 
-model Member {
-  memberId        String   @id @default(uuid())
-  name            String
-  email           String   @unique
-  phone           String
-  membershipDate  DateTime
+model ReviewAndRating {
+  id      String  @id @default(uuid()) 
+  review  String
+  rating  Rating
+  userId  String
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  bookId  String
+  book    Book    @relation(fields: [bookId], references: [id], onDelete: Cascade)
 
-  BorrowRecords BorrowRecord[]
-
-   @@map("members")
+  @@map("reviews_and_ratings")
 }
 
-model BorrowRecord {
-  borrowId    String   @id @default(uuid())
-  borrowDate  DateTime
-  returnDate  DateTime?
+model Order {
+  id           String   @id @default(uuid()) 
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  orderedBooks Json[]
+  status       OrderStatus?   @default(pending)
+  createdAt    DateTime @default(now())
 
-  bookId      String
-  memberId    String
+  @@map("orders")
+}
 
-  Book        Book      @relation(fields: [bookId], references: [bookId])
-  Member      Member    @relation(fields: [memberId], references: [memberId])
+enum Role {
+  admin
+  customer
+}
 
-  @@map("borrowRecords")
+enum Rating {
+  ONE
+  TWO
+  THREE
+  FOUR
+  FIVE
+}
+
+enum OrderStatus {
+  pending
+  shipped
+  delivered
 }
