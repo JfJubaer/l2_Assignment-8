@@ -11,13 +11,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model User {
-  id         String   @id @default(uuid()) 
+  id         String            @id @default(uuid())
   name       String
-  email      String   @unique
+  email      String            @unique
   password   String
-  role       Role   @default(customer) 
+  role       Role              @default(customer)
   contactNo  String?
   address    String?
   profileImg String?
@@ -28,7 +27,7 @@ model User {
 }
 
 model Category {
-  id    String  @id @default(uuid())
+  id    String @id @default(uuid())
   title String
   books Book[]
 
@@ -36,41 +35,50 @@ model Category {
 }
 
 model Book {
-  id               String             @id @default(uuid()) 
-  title            String
-  author           String
-  price            Float
-  genre            String
-  publicationDate  String
-  categoryId       String
-  category         Category           @relation(fields: [categoryId], references: [id], onDelete: Cascade)
-  reviews          ReviewAndRating[]
-  orderedBooks     Json[]
+  id              String            @id @default(uuid())
+  title           String
+  author          String
+  price           Int
+  genre           String
+  publicationDate String
+  categoryId      String
+  category        Category          @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  reviews         ReviewAndRating[]
+  orderedBooks    OrderedBook[]
 
   @@map("books")
 }
 
 model ReviewAndRating {
-  id      String  @id @default(uuid()) 
-  review  String
-  rating  Rating
-  userId  String
-  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-  bookId  String
-  book    Book    @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  id     String @id @default(uuid())
+  review String
+  rating Rating
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  bookId String
+  book   Book   @relation(fields: [bookId], references: [id], onDelete: Cascade)
 
   @@map("reviews_and_ratings")
 }
 
 model Order {
-  id           String   @id @default(uuid()) 
+  id           String        @id @default(uuid())
   userId       String
-  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  orderedBooks Json[]
-  status       OrderStatus?   @default(pending)
-  createdAt    DateTime @default(now())
-
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  orderedBooks OrderedBook[]
+  status       OrderStatus?  @default(pending)
+  createdAt    DateTime      @default(now())
   @@map("orders")
+}
+
+model OrderedBook {
+  id       String @id @default(uuid())
+  quantity Int
+  bookId   String
+  book     Book   @relation(fields: [bookId], references: [id])
+  orderId  String
+  order    Order  @relation(fields: [orderId], references: [id])
+  @@map("orderedBooks")
 }
 
 enum Role {
